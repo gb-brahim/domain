@@ -142,9 +142,8 @@ list item b 0.5rem  w zid ki tkon kayna l icon ykon kayn some vertical space bet
   height: 50px;
 }
 .icon--small {
-  width: 15px;
-  height: 15px;
-  margin-right: 1rem;
+  width: 40px;
+  height: 40px;
 }
 .icon--primary {
   fill: var(--color-primary);
@@ -391,5 +390,32 @@ container decide how should they be */
 @media screen and (min-width: 1024px) {
   .grid--1x3 {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+/*testimonial*/
+.testimonial {
+  padding: 3rem;
+}
+.testimonial__image {
+  width: 100%;
+}
+.testimonial--imageIconContainer {
+  position: relative;
+}
+.testimonial--imageIconContainer .icon-container {
+  position: absolute;
+  top: 1rem;
+  right: -25px;
+}
+.testimonial--imageIconContainer .icon-container {
+  background: var(--color-accent);
+}
+@media screen and (min-width: 768px) {
+  .testimonial .quote,
+  .testimonial .quote__author {
+    font-size: 2.4rem;
+  }
+  .testimonial .quote {
+    margin-left: 6rem;
   }
 }

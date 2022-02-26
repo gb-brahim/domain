@@ -100,6 +100,7 @@ a {
 }
 .badge--small {
   font-size: 1.6rem;
+  padding: 0.5rem 1rem;
 }
 @media screen and (min-width: 1024px) {
   .badge {
@@ -185,6 +186,7 @@ list item b 0.5rem  w zid ki tkon kayna l icon ykon kayn some vertical space bet
 }
 .btn--outline {
   outline: 0;
+  background: none;
   border: 2px solid var(--color-headings);
   color: var(--color-headings);
   border-color: var(--color-headings);
@@ -245,8 +247,8 @@ list item b 0.5rem  w zid ki tkon kayna l icon ykon kayn some vertical space bet
 }
 /* Cards */
 /*why we don't add a width to the card ?? because
- we let the cards to be flexible and we let the 
- container decide how should they be */
+we let the cards to be flexible and we let the 
+container decide how should they be */
 .card {
   border-radius: 7px;
   box-shadow: 0 0 20px 10px #f3f3f3;
@@ -262,10 +264,55 @@ list item b 0.5rem  w zid ki tkon kayna l icon ykon kayn some vertical space bet
   background: var(--color-primary);
   color: #fff;
 }
+.card--primary .card__header .badge--primary {
+  background: var(--color-secondary);
+}
 
 .card--secondary .card__header {
   background: var(--color-secondary);
   color: #fff;
 }
+.card--secondary .card__header .badge--secondary {
+  background: var(--color-primary);
+}
 
 /* Plans */
+.plan__name {
+  color: #fff;
+  margin: 0;
+  font-weight: 500;
+  font-size: 2.4rem;
+}
+.plan__price {
+  font-size: 6rem;
+}
+.plan__billing-cycle {
+  font-size: 2.4rem;
+  font-weight: 300;
+  opacity: 0.8;
+  margin-right: 1rem;
+}
+.plan__description {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  display: block;
+}
+.plan .list__item {
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+@media screen and (min-width: 1024px) {
+  .plan__name {
+    font-size: 1.4rem;
+  }
+  .plan__price {
+    font-size: 5rem;
+  }
+  .plan__billing-cycle {
+    font-size: 1.6rem;
+  }
+  .plan__description {
+    font-size: 1.7rem;
+  }
+}

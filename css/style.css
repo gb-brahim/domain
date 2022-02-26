@@ -327,4 +327,13 @@ container decide how should they be */
     font-size: 1.7rem;
   }
 }
-/*popular_badge*/
+/*media_objects*/
+.media {
+  display: flex;
+}
+.media__body {
+  margin: 0 2rem;
+}
+.media__image {
+  margin-top: 1rem;
+}

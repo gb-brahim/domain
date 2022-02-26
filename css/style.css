@@ -302,6 +302,17 @@ container decide how should they be */
   margin-bottom: 2rem;
   letter-spacing: 1px;
 }
+.plan--popular .card__header {
+  position: relative;
+}
+.plan--popular .card__header::before {
+  content: url(../images/popular.svg);
+  display: inline-block;
+  position: absolute;
+  top: -6px;
+  right: 5%;
+  width: 40px;
+}
 @media screen and (min-width: 1024px) {
   .plan__name {
     font-size: 1.4rem;
@@ -316,3 +327,4 @@ container decide how should they be */
     font-size: 1.7rem;
   }
 }
+/*popular_badge*/

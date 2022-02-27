@@ -452,3 +452,30 @@ container decide how should they be */
     grid-template-columns: 1fr auto /*auto means it will stretch to fit the width of the button only */;
   }
 }
+/*Collapse header*/
+.collapse__header {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+.collapse__icon {
+  transform: rotate(90deg);
+  transition: transform 0.5s;
+}
+.collapse__content {
+  /* display: none; instead of displaying none will gonna learn a trick*/
+  /*it means if there is a height it will be maximum 0
+ it s not like saying height:100vh here we applayed the height of 100vh but when we do 
+ max-height: 100vh here the height will cover the content but if the content has beyond 100vh it will be an overflow
+ so I'll get an overflow Now */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+.collapse--expanded .collapse__icon {
+  transform: rotate(0);
+}
+.collapse--expanded .collapse__content {
+  max-height: 100vh;
+  transition: max-height 4s;
+}

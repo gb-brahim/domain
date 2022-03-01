@@ -479,3 +479,32 @@ container decide how should they be */
   max-height: 100vh;
   transition: max-height 4s;
 }
+/*Blocks*/
+.block {
+  --padding-vertical: 6rem; /*why we did this !!to prevent the issues whe we apply the skewed*/
+  border: 2px solid red;
+}
+.block--dark {
+  background-color: #000;
+  color: #7b858b;
+}
+.block--dark .block__heading {
+  color: #fff;
+}
+.block--skewed-right {
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
+  /*here we said whatever the padding-bottom of the div we add 4rem to it*/
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 86%);
+}
+.block--skewed-left {
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
+  /*here we said whatever the padding-bottom of the div we add 4rem to it*/
+  clip-path: polygon(0% 0%, 100% 0%, 100% 86%, 0% 100%);
+}
+.block__header {
+  text-align: center;
+}
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}

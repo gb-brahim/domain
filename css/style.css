@@ -31,6 +31,7 @@ h4,
 h5 {
   color: var(--color-headings);
   margin: 0 0 1rem;
+  line-height: 1.1;
 }
 h1 {
   font-size: 7rem;
@@ -483,7 +484,6 @@ container decide how should they be */
 /*Blocks*/
 .block {
   --padding-vertical: 6rem; /*why we did this !!to prevent the issues whe we apply the skewed*/
-  border: 2px solid red;
 }
 .block--dark {
   background-color: #000;
@@ -500,7 +500,7 @@ container decide how should they be */
 .block--skewed-left {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
   /*here we said whatever the padding-bottom of the div we add 4rem to it*/
-  clip-path: polygon(0% 0%, 100% 0%, 100% 86%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
 }
 .block__header {
   text-align: center;
@@ -562,5 +562,26 @@ I want them to be appplied only to the navigation bar elements*/
     padding-bottom: 0;
     font-size: 1.6rem;
     border: none;
+  }
+}
+/*hero*/
+.hero__tagline {
+  font-size: 2rem;
+  color: #b9c3cf;
+  margin: 2rem 0 5rem;
+}
+.hero__image {
+  width: 100%;
+}
+.hero__content {
+  padding-top: 10rem;
+  align-self: center;
+}
+.hero {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0 100%);
+}
+@media screen and (min-width: 768px) {
+  .block__header {
+    text-align: left;
   }
 }

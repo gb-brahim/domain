@@ -598,7 +598,9 @@ I want them to be appplied only to the navigation bar elements*/
 }
 .domain-block__input {
   padding: 0 0 0 2rem;
-  width: 688px;
+  box-shadow: 0 0 30px 20px #e6ebee;
+  border: 0;
+  max-width: 670px;
   margin: 0 auto;
 }
 
@@ -608,8 +610,8 @@ I want them to be appplied only to the navigation bar elements*/
 .domain-block__list {
   font-size: 2rem;
   font-weight: 800;
-  width: 600px;
-  margin: 1rem auto 0;
+  max-width: 700px;
+  margin: 1rem auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 6rem);
@@ -620,14 +622,18 @@ I want them to be appplied only to the navigation bar elements*/
 }
 @media screen and (min-width: 768px) {
   .domain-block__list {
-    grid-template-columns: repeat(6, 11rem);
-    justify-self: auto;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(10rem, 1fr)
+    ); /*here I an use another thing if tomorrow we wanna add another column her 
+    I should go back here and change the number wich is not professional*/
+    /*auto-fit: means it will take the size of the element and fit it */
+    /*minmax(10rem,1fr) hna te7seb ch7al kayn space for wx:600px w etchof ch7al 3andha mn elements w te9sem lmohim
+     matfotch l 1fr ida fatet ray7a tban anomalie*/
+
     font-size: 1.5rem;
-    justify-content: center;
-    align-content: center;
   }
   .domain-block__input {
-    width: 700px;
   }
   .domain-block .block__header {
     text-align: center;

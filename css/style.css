@@ -662,3 +662,35 @@ I want them to be appplied only to the navigation bar elements*/
 .block-plans .plan--popular:hover {
   transform: scale(1.11);
 }
+/*featurs block*/
+.feature__header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.feature__img {
+  box-shadow: 0 0 10px grey;
+  width: 100%;
+  justify-self: stretch;
+  align-self: stretch;
+}
+.feature {
+  padding: 2rem;
+  margin: 12rem;
+  gap: 2rem;
+}
+.feature:first-of-type {
+  margin-top: 6rem;
+}
+.feature-block .grid--1x2 {
+  gap: 6rem;
+}
+/*hna rani ray7 ntaget deuxieme (wela 4,6,8,...) feature
+ menba3d
+ ntaget feature__content w ndirelha l order ta3ha 2
+ ih w wa3lach dernaha ghir lel desktop ha psk manich hab
+  fel mobile version ten3kas */
+@media screen and (min-width: 768px) {
+  .feature:nth-of-type(even) .feature__content {
+    order: 2;
+  }
+}

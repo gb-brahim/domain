@@ -639,3 +639,26 @@ I want them to be appplied only to the navigation bar elements*/
     text-align: center;
   }
 }
+/* Plans Block */
+.block-plans {
+  padding: 4rem;
+}
+.block-plans .grid {
+  gap: 8rem 4rem;
+}
+.plan {
+  transition: 0.5s ease-out;
+}
+.block-plans .plan--popular {
+  transform: scale(1.1);
+}
+.block-plans .card {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.plan:hover {
+  transform: scale(1.05);
+}
+.block-plans .plan--popular:hover {
+  transform: scale(1.11);
+}

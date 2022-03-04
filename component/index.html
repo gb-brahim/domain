@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        strong{
+        color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grid:for laying out elements in both rows and columns instead of felxBox laying in horizontal or vertical</h1>
+    <div class="container">
+        <div class="box one">A</div>
+        <div class="box two">B</div>
+        <div class="box three">C</div>
+    </div>
+    <div class="container1">
+        <div class="box four">A</div>
+        <div class="box five">B</div>
+        <div class="box six">C</div>
+    </div>
+    <h1>the problem of percentages % :
+        .container1{
+        display: grid;
+        grid-template-rows: repeat(3,10rem);
+        grid-template-columns: 30% 70%;}
+        %:means 30 percent from the length of the container <strong>not the 30% of the availble space</strong> </h1>
+     
+<h1>so I need a unit to target this free space ?? <strong>the unit is fraction</strong> </h1>
+    
+<h1>I need to make gaps between the columns and rows how can I add this??
+    T have  <mark>row-gap</mark>,<mark>column-gap</mark>,<mark>gap:that s the short for column and rows</mark>
+</h1>
+<h1><strong>the best way to define or place items in a grid is using grid-template-areas </strong></h1>
+
+<h1>
+One last thing  
+grid-template-areas: 
+"header  header"/*the name of the first row*/
+"sideBar main"
+"<mark>.  </mark>      footer";hna ki nkon hab nkhali jiha fargha kml ndir ghir point
+</h1>
+</body>
+</html>

@@ -694,3 +694,24 @@ I want them to be appplied only to the navigation bar elements*/
     order: 2;
   }
 }
+/*Show case block*/
+.showcase-block__img > img {
+  width: 100%;
+}
+.showcase-block .media__title {
+  color: #fff;
+}
+.showcase-block {
+  gap: 4rem;
+  padding: 6rem;
+}
+.showcase-block .block__header {
+  margin-bottom: 4rem;
+}
+.showcase__heading {
+  color: #fff;
+  letter-spacing: 1px;
+}
+.showcase-block .grid {
+  padding-bottom: 8rem;
+}

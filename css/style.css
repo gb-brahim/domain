@@ -170,7 +170,7 @@ list item b 0.5rem  w zid ki tkon kayna l icon ykon kayn some vertical space bet
   text-transform: uppercase;
   border: 0;
   text-align: center;
-  padding: 2rem 3rem;
+  padding: 2rem 4vw;
   cursor: pointer;
   margin: 1rem 0;
   white-space: nowrap;
@@ -237,6 +237,7 @@ list item b 0.5rem  w zid ki tkon kayna l icon ykon kayn some vertical space bet
   border: none;
   flex-grow: 1;
   padding: 1.5rem 1rem;
+  width: 0;
 }
 .input-group .btn {
   margin: 4px;
@@ -399,6 +400,7 @@ container decide how should they be */
 /*testimonial*/
 .testimonial {
   padding: 3rem;
+  margin-bottom: 6rem;
 }
 .testimonial__image {
   width: 100%;
@@ -407,14 +409,22 @@ container decide how should they be */
   position: relative;
 }
 .testimonial--imageIconContainer .icon-container {
-  position: absolute;
-  top: 1rem;
-  right: -25px;
-}
-.testimonial--imageIconContainer .icon-container {
   background: var(--color-accent);
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 300px) {
+  .testimonial--imageIconContainer .icon-container {
+    position: absolute;
+    top: 1rem;
+  }
+}
+@media screen and (min-width: 301px) {
+  .testimonial--imageIconContainer .icon-container {
+    position: absolute;
+    top: 1rem;
+    right: -25px;
+  }
+}
+@media screen and (min-width: 769px) {
   .testimonial .quote,
   .testimonial .quote__author {
     font-size: 2.4rem;
@@ -537,7 +547,7 @@ I want them to be appplied only to the navigation bar elements*/
 .nav__list {
   padding-left: 2rem;
   margin: 0;
-  /* width: 100%; */ /*we used width 100% coz in flex the block element will be adjusted like we define justfy-content and align items their width will be increases or decreases depend on flex*/
+  width: 100%; /*we used width 100% coz in flex the block element will be adjusted like we define justfy-content and align items their width will be increases or decreases depend on flex*/
 }
 .navlist__item {
   padding: 0 2rem;
@@ -613,7 +623,7 @@ I want them to be appplied only to the navigation bar elements*/
   max-width: 700px;
   margin: 1rem auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 6rem);
 }
 .domain-block-list__item {
@@ -641,7 +651,6 @@ I want them to be appplied only to the navigation bar elements*/
 }
 /* Plans Block */
 .block-plans {
-  padding: 4rem;
 }
 .block-plans .grid {
   gap: 8rem 4rem;
@@ -666,6 +675,7 @@ I want them to be appplied only to the navigation bar elements*/
 .feature__header {
   text-align: center;
   margin-bottom: 4rem;
+  margin-top: 6rem;
 }
 .feature__img {
   box-shadow: 0 0 10px grey;
@@ -674,8 +684,7 @@ I want them to be appplied only to the navigation bar elements*/
   align-self: stretch;
 }
 .feature {
-  padding: 2rem;
-  margin: 12rem;
+  margin: 2rem auto;
   gap: 2rem;
 }
 .feature:first-of-type {
@@ -702,6 +711,7 @@ I want them to be appplied only to the navigation bar elements*/
   color: #fff;
 }
 .showcase-block {
+  margin-top: 6rem;
   gap: 4rem;
   padding: 6rem;
 }
@@ -770,11 +780,11 @@ I want them to be appplied only to the navigation bar elements*/
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   }
 
-  .footer .collapse__chevron {
+  .footer .collapse__icon {
     display: none;
   }
 
-  .footer .collapsible__content {
+  .footer .collapse__content {
     opacity: 1;
     max-height: 100%;
   }
